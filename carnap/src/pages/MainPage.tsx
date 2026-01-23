@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/my-styles.css'
 import chapters from '../metadata/chapters.json'
 import ServiceCard from './components/ServiceCard';
+import Footer from './components/Footer';
 const colors = {
     darkBlue: '#002e4d',
     orangeBtn: '#f08161',
@@ -10,6 +11,7 @@ const colors = {
   };
 const MainPage: React.FC = () => {
   return (
+    <div className='d-flex flex-column'>
     <div className="container-fluid p-0">
         <div className="w-100 d-flex text-white px-4" 
         style={{ height: '150px', backgroundColor: '#002e4d', position: 'relative' }}>
@@ -132,11 +134,14 @@ const MainPage: React.FC = () => {
             </section>
         </div>
         
-        <div className='d-flex flex-column gap-2 w-100 container justify-content-center align-items-center px-4'>
+        <div className='d-flex  gap-2 w-100 container justify-content-center align-items-center px-4'>
             {chapters.map((c: any) => (
                 <ServiceCard caption={c.description} imageUrl='' url=''></ServiceCard>
             ))}
         </div>
+        
+    </div>
+    <Footer/>
     </div>
   );
 };

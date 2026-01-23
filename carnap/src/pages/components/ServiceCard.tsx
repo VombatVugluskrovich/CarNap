@@ -9,8 +9,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ caption, url, imageUrl }) => 
     <div 
       className="d-flex flex-column align-items-center justify-content-between p-4 shadow" 
       style={{ 
-        width: '320px', 
-        height: '350px', 
+        width: '120px', 
+        height: '150px', 
         backgroundColor: '#002e4d', // Фирменный темно-синий цвет
         color: 'white',
         textAlign: 'center'
