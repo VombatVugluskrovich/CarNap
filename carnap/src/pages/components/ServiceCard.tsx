@@ -1,3 +1,6 @@
+import { Grid } from "react-bootstrap-icons";
+import CardPage from "./cardPage";
+
 interface ServiceCardProps {
   caption: string;
   url: string;
@@ -6,22 +9,25 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ caption, url, imageUrl }) => {
   return (
-    <div 
-      className="d-flex flex-column align-items-center justify-content-between p-4 shadow" 
+    <div
+      className="d-flex flex-column align-items-center justify-content-between p-1 shadow" 
       style={{ 
-        width: '120px', 
-        height: '150px', 
+        width: '160px', 
+        height: '180px', 
         backgroundColor: '#002e4d', // Фирменный темно-синий цвет
         color: 'white',
-        textAlign: 'center'
+        textAlign: 'center',
+        
+        
+
       }}
     >
       {/* Иконка (Лупа с шестеренкой) */}
       <div className="mt-3">
         <img 
-          src="/images/icon-diagnostic.png" 
+          src={imageUrl} 
           alt="Diagnostic Icon" 
-          style={{ width: '80px', filter: 'brightness(0) invert(1)' }} 
+          style={{ width: '45px', filter: 'brightness(0) invert(1)' }} 
         />
       </div>
 
@@ -34,10 +40,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ caption, url, imageUrl }) => 
         style={{ 
           border: '2px solid white', 
           width: '100%',
-          minHeight: '80px'
+          minHeight: '80px',
+          maxHeight: '90px', 
         }}
       >
-        <h5 className="fw-bold m-0 text-uppercase" style={{ fontSize: '1.1rem', letterSpacing: '1px' }}>
+        <h5 className="fw-bold m-0 text-uppercase" style={{ fontSize: '0.8rem', letterSpacing: '1px', paddingLeft: '3px' , paddingRight: '3px'}} >
           {caption}
         </h5>
       </div>
