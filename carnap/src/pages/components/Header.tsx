@@ -1,55 +1,52 @@
+import { Link } from "react-router-dom"
+
 const Header = () => {
     return (
         <div>
             <div className="w-100 d-flex text-white px-4"
-                style={{ height: '150px', backgroundColor: '#002e4d', position: 'relative' }}>
+                style={{
+                    minHeight: '150px', backgroundColor: '#002e4d', position: 'relative',
+                    width: '100%'
+                }}>
 
-                <div className='col-2'></div>
-                <div className="col-3 d-flex col-3 d-flex justify-content-start align-items-start px-4">
-                    <img
+               
+                <div className="col-md-3 d-flex  d-flex justify-content-start align-items-center ps-0 justify-content-around offset-md-1">
+                    <Link to={'/'}><img
                         src="/images/Logo.png"
                         alt="CarNap Logo"
                         style={{
-                            height: '150px',
+                            height: window.innerWidth > 768 ? '150px' : '120px',
                             width: 'auto',
                             zIndex: 10,
                             objectFit: 'contain',
-                            marginLeft: '0px'
                         }}
-                    />
+    
+                    /></Link>
+                    
                 </div>
 
                 {/* Текст */}
-                <div className="col-4 d-flex align-items-center justify-content-left px-4" style={{ padding: '20px]' }}>
+                <div className="col-md-4 d-flex align-items-center justify-content-center justify-content-md-start px-4" style={{ padding: '20px]' }}>
                     <div className='d-flex w-100'>
                         <div>
-                            <h2 className="fw-bold">CAR NAP | СТО, Автосервіс Київ</h2>
-                        </div>
-                        <div className='col-sm-4'>
-                            <h5>
-                                <a href="tel:+380677140747" className="text-white text-decoration-none">
-                                    +38(067) 714 07 47
-                                </a>
-                            </h5>
-                            <h5>
-                                <a href="tel:+380677140747" className="text-white text-decoration-none">
-                                    +38(067) 714 07 47
-                                </a>
-                            </h5>
+                            <h2 className="fw-bold"
+                            style={{
+                                fontSize: 'clamp(14px, 4vw, 28px)'
+                            }}>CAR NAP | СТО, Автосервіс Київ</h2>
                         </div>
                     </div>
                 </div>
                 <div className="col-2 d-flex align-items-center justify-content-center px-4">
-                    <button className="btn btn-outline-light px-4 py-2" onClick={() => alert('ololoo')}>Запис Online</button>
+                    <Link to={'/orderCall'} className="btn btn-outline-light px-4 py-2" >Запис Online</Link>
                 </div>
             </div>
             <div className="w-100 bg-light border-bottom">
-                <nav className="d-flex justify-content-center py-2 gap-3">
+                <nav className="d-flex justify-content-center py-2 gap-3 flex-wrap">
                     {/* Заглушка, чтобы текст меню не залез под логотип на десктопе */}
-                    <div className="d-none d-lg-block" style={{ width: '180px' }}></div>
-                    <a href="#" className="text-decoration-none text-dark px-2">Послуги</a>
-                    <a href="#" className="text-decoration-none text-dark px-2">Обслуговування</a>
-                    <a href="#" className="text-decoration-none text-dark px-2">Контакти</a>
+                    <div className="d-none d-lg-block" ></div>
+                    <Link to={'/services'}>Послуги</Link>
+                    <Link to={'/contacts'}>Обслуговування</Link>
+                    <Link to={'/contacts'}>Контакти</Link>
                 </nav>
             </div>
         </div>)

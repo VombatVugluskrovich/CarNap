@@ -15,21 +15,21 @@ const Footer: React.FC = () => {
             <p className="mb-1 fw-bold">Car Nap</p>
             <p className="mb-3">
                             
-              <a href="tel:+380677140747" className="text-white text-decoration-none">
+              <a href="tel:+380677140747">
                 +38(067) 714 07 47
               </a>
              </p>
              <p  className="mb-3">
-              <a href="tel:+380677140747" className="text-white text-decoration-none">
+              <a href="tel:+380677140747" >
                             +38(067) 714 07 47
                </a>
             </p>
-            <a href='https://maps.app.goo.gl/FUV24txZsGYfAdhZ8' target='blank' className="text-white">
+            <a href='https://maps.app.goo.gl/FUV24txZsGYfAdhZ8' target='blank'>
                 <p className="mb-1">КИЇВ, УКРАЇНА</p>
                 <p className="mb-3"> вулиця Гліба Бабіча, 1</p>
             </a>
             <p>
-              <a href="mailto:INFO@BOSCHSERVICE.KIEV.UA" className="text-white text-decoration-none border-bottom border-secondary">
+              <a href="mailto:INFO@BOSCHSERVICE.KIEV.UA" className="border-bottom border-secondary">
                 INFO@BOSCHSERVICE.KIEV.UA
               </a>
             </p>
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
           <div className="col-md-4 text-md-end">
             <h5 className="fw-bold mb-4 text-uppercase">Зателефонуйте нам сьогодні</h5>
             <h2 className="fw-bold mb-4">
-              <a href="tel:+380677140747" className="text-white text-decoration-none">
+              <a href="tel:+380677140747" >
                 +38(067) 714 07 47
               </a>
             </h2>

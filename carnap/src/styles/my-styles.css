@@ -21,3 +21,18 @@
         height:100
     }
 }
+a {
+  color: inherit;          
+  text-decoration: none;
+  
+}
+a:hover{
+    color: rgb(133, 133, 133);
+    text-decoration: underline;
+    transition: color 0.1s ease;
+}
+.LinkOnHover{
+    color: rgb(133, 133, 133);
+    text-decoration: underline;
+    transition: color 0.1s ease;
+}
