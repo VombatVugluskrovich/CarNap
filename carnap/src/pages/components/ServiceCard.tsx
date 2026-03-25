@@ -21,7 +21,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ caption, url, imageUrl }) => 
         
 
       }}
-    >
+    > 
       {/* Иконка (Лупа с шестеренкой) */}
       <div className="mt-3">
         <img 

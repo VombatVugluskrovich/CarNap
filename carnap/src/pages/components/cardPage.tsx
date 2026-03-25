@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import CardPageContent from '../../metadata/chapters.json'
+import HomeButton from './homeBtn';
 
 
 const CardPage = (props: { id: any }) => {
@@ -18,6 +19,7 @@ const CardPage = (props: { id: any }) => {
         <div className="w-100 container" style={{
             padding: '10px',
         }}>
+            <HomeButton />
             <div className="p-3 mb-2 bg-light border rounded align-items-center d-flex flex-column flex-md-row justify-content-between"
                 style={{
                     minHeight: '500px'

@@ -10,6 +10,7 @@ import { BrowserRouter, Routes, Route, Link, Router, useSearchParams, useLocatio
 import ContactsPage from './Contacts';
 import ServicesPage from './components/Services';
 import OrderCallPage from './components/OrderCall';
+import AboutUs from './components/aboutUs';
 
 
 const MainPage: React.FC = () => {
@@ -27,6 +28,7 @@ const MainPage: React.FC = () => {
                     <Route path='/contacts' element={<ContactsPage />} />
                     <Route path='/services' element={<ServicesPage />} />
                     <Route path='/ordercall' element={<OrderCallPage />} />
+                    <Route path='/aboutus' element={<AboutUs />}/>
                 </Routes>
             </div>
             <Footer />

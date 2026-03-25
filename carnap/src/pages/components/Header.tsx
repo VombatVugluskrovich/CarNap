@@ -45,8 +45,8 @@ const Header = () => {
                     {/* Заглушка, чтобы текст меню не залез под логотип на десктопе */}
                     <div className="d-none d-lg-block" ></div>
                     <Link to={'/services'}>Послуги</Link>
-                    <Link to={'/contacts'}>Обслуговування</Link>
                     <Link to={'/contacts'}>Контакти</Link>
+                    <Link to={'/aboutus'}>Про нас</Link>
                 </nav>
             </div>
         </div>)

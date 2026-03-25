@@ -1,6 +1,7 @@
 import { useRef, useState } from "react"
 import Botapi from "..//..//metadata/telegramBotId.json"
 import { Link } from "react-router-dom";
+import HomeButton from "./homeBtn";
 const OrderCallPage = () => {
     const config = Array.isArray(Botapi) ? Botapi[0] : Botapi;
     const api = config?.api;
@@ -24,7 +25,7 @@ const OrderCallPage = () => {
             padding: '10px',
             minHeight: '500px'
         }}>
-            <Link to={'/'}><img src="home.svg" /></Link>
+           <HomeButton />
             <form onSubmit={sendToTelegram}>
                 <div className="mb-3">
                     <label className="form-label">Ваше Ім'я</label>

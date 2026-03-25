@@ -60,21 +60,7 @@ const MainText = () => {
                                         деформацію та знос.
                                     </p>
 
-                                    {/* Кнопка */}
-                                    <div className="mt-4">
-                                        <button
-                                            className="btn btn-lg px-5 text-white"
-                                            style={{
-                                                backgroundColor: colors.orangeBtn,
-                                                borderRadius: '0',
-                                                fontWeight: 500,
-                                                border: 'none'
-                                            }}
-                                            onClick={() => console.log('Перехід до деталей')}
-                                        >
-                                            Детальніше
-                                        </button>
-                                    </div>
+                                                                    
                                 </div>
                             </div>
                         </div>
