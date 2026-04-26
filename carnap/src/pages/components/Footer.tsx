@@ -28,11 +28,6 @@ const Footer: React.FC = () => {
                 <p className="mb-1">КИЇВ, УКРАЇНА</p>
                 <p className="mb-3"> вулиця Гліба Бабіча, 1</p>
             </a>
-            <p>
-              <a href="mailto:INFO@BOSCHSERVICE.KIEV.UA" className="border-bottom border-secondary">
-                INFO@BOSCHSERVICE.KIEV.UA
-              </a>
-            </p>
           </div>
 
           {/* Час роботи */}
@@ -61,12 +56,12 @@ const Footer: React.FC = () => {
             </h2>
             <div className="d-flex justify-content-md-end gap-2">
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" 
+                src="images/visa.svg" 
                 alt="Visa" 
                 style={{ height: '30px', backgroundColor: 'white', padding: '4px', borderRadius: '4px' }}
               />
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" 
+                src="images/mastercard.png" 
                 alt="Mastercard" 
                 style={{ height: '30px', backgroundColor: 'white', padding: '4px', borderRadius: '4px' }}
               />

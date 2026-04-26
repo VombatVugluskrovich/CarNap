@@ -27,7 +27,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ caption, url, imageUrl }) => 
         <img 
           src={imageUrl} 
           alt="Diagnostic Icon" 
-          style={{ width: '45px', filter: 'brightness(0) invert(1)' }} 
+          style={{ width: '47px', filter: 'brightness(0) invert(1)' }} 
         />
       </div>
 

@@ -9,7 +9,7 @@ const CardsList = () => {
          marginBottom: '50px'
                 }}>
                     {chapters.map((c: any) => (
-                        <ServiceCard caption={c.description} imageUrl={'/images/ico' + c.id + '.svg'} url={c.url} key={c.id}></ServiceCard>
+                        <ServiceCard caption={c.description} imageUrl={'/images/ico' + c.id + '.png'} url={c.url} key={c.id}></ServiceCard>
                         ))}
                 </div>
                 

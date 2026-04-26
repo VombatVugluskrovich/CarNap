@@ -1,15 +1,17 @@
 import { useEffect } from 'react';
 import CardPageContent from '../../metadata/chapters.json'
 import HomeButton from './homeBtn';
+import { Link } from 'react-router-dom';
 
 
 const CardPage = (props: { id: any }) => {
-    let description = '', image = '', list: string[] = [];
+    let description = '', image = '', list: string[] = [], videoUrl: string;
     CardPageContent.map((c: any) => {
         if (c.url == props.id) {
             description = c.text;
             image = c.cardPageImage;
             list = c.cardPageList
+            videoUrl = c.videoUrk;
         }
     })
     useEffect(() => {
@@ -22,24 +24,25 @@ const CardPage = (props: { id: any }) => {
             <HomeButton />
             <div className="p-3 mb-2 bg-light border rounded align-items-center d-flex flex-column flex-md-row justify-content-between"
                 style={{
-                    minHeight: '500px'
+                    minHeight: '500px',
+                    maxHeight: '5000px'
                 }}
             >
 
-                <img src={image} style={{
+                <img src={image} alt="Картинки нема." style={{
                     maxWidth: '80%',
-                    maxHeight: '500px'
+                    maxHeight: '500px',
+
                 }}></img>
                 <p style={{
                     fontSize: '1.3rem',
                     paddingLeft: '12px',
+                    whiteSpace: 'pre-line'
 
                 }}>{description}</p>
 
             </div >
-            <h3 style={{
-                visibility: list.length > 2 ? 'visible' : 'hidden'
-            }}>Типи робіт</h3>
+
             <ul style={{
                 fontSize: '1.3rem',
                 marginLeft: '25px',
@@ -51,6 +54,23 @@ const CardPage = (props: { id: any }) => {
                     <li>{c}</li>
                 ))}
             </ul>
+            
+            <Link to={"/contacts"} style={{display: 'flex', justifyContent: 'center' }}>
+                <h2 style={{
+                    color: 'white',            // Колір тексту
+                    backgroundColor: 'red',    // Колір фону
+                    padding: '12px 30px',      // Відступи всередині (висота та ширина кнопки)
+                    borderRadius: '8px',       // Закруглення кутів
+                    textAlign: 'center',       // Текст по центру
+                    fontSize: '1.5rem',        // Розмір шрифту
+                    fontWeight: 'bold',        // Жирний шрифт
+                    boxShadow: '0 4px 6px rgba(0,0,0,0.1)', // Легка тінь для об'єму
+                    marginTop: '30px',         // Відступ зверху
+                    cursor: 'pointer'          // Курсор при наведенні
+                }}>
+                    Записатися зараз
+                </h2>
+            </Link>
         </div>
     )
 
